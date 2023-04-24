@@ -52,4 +52,38 @@ function changeExtension() {
 
 
 
+$(document).ready(function() {
+  // Handle touch events on mobile devices
+  $('button').on('touchstart', function() {
+    $(this).addClass('hover');
+  });
+  $('button').on('touchend', function() {
+    $(this).removeClass('hover');
+  });
+
+  // Handle file upload and extension change
+  function changeExtension() {
+    var fileUpload = document.getElementById("fileUpload");
+    var newExtension = document.getElementById("newExtension").value;
+    var result = document.getElementById("result");
+
+    if (typeof fileUpload.files !== "undefined") {
+      var fileName = fileUpload.files[0].name;
+      if (fileName.lastIndexOf(".") !== -1 && fileName.lastIndexOf(".") !== 0) {
+        var lastIndex = fileName.lastIndexOf(".");
+        var extension = fileName.substring(lastIndex);
+        var newFileName = fileName.substring(0, lastIndex) + newExtension;
+        result.innerHTML = "New filename: " + newFileName;
+      } else {
+        result.innerHTML = "Invalid file format";
+      }
+    } else {
+      result.innerHTML = "Please select a file";
+    }
+  }
+
+  $('button').on('click', function() {
+    changeExtension();
+  });
+});
 
