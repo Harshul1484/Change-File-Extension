@@ -1,10 +1,10 @@
 # Change-File-Extension
-HTML and CSS part.
+-- HTML and CSS part.
 
-This is an HTML document that contains a form for changing the file extension of a selected file. It
+*This is an HTML document that contains a form for changing the file extension of a selected file. It
 also includes CSS styling for a glass frame effect and a background image, as well as a JavaScript
 file for handling the form submission.
 
-Javascript part.
+-- Javascript part.
  * The function changes the extension of an uploaded file and creates a download link for the new file.
  * @returns Nothing is being returned. The function is modifying the DOM by adding a download button for the new file.
