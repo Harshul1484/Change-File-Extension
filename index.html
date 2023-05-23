@@ -1,0 +1,114 @@
+<html>
+<html>
+<head>
+	<title>Change File Extension</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: url('background-image.jpeg') no-repeat center center fixed;
+			background-size: cover;
+		}
+		
+		.glass-frame {
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+			max-width: 600px;
+			width: 100%;
+		}
+
+    .glass-frame {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 5px rgba(8, 225, 229, 0.8);
+}
+
+		
+		h1 {
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		select {
+			margin-left: 5px;
+		}
+		
+		button {
+			margin-top: 10px;
+			margin-right: 5px;
+		}
+
+		#result {
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		form button {
+			margin-top: 20px;
+		}
+
+		form button[type="reset"] {
+			margin-left: 5px;
+		}
+    
+	</style>
+</head>
+
+
+<!--
+  ⣀⠀⠐⣶⣄⣀⣀⠀⠀⣠⠾⣿⣇⠹⣄⣩⣿⣿⡳⣆⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀
+⠛⠛⠻⠿⠿⠿⠿⠿⠿⠿⣿⠟⠋⠀⢀⠀⠀⠈⠙⠭⣿⣿⣦⣦⣤⣄⣰⣠⣀⣀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⠅⠀⡀⠀⠀⠄⠂⠀⠀⠀⠈⢝⣏⠉⠉⠉⠉⠉⠛⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡏⠀⢨⠈⠆⠀⠀⢀⠁⠌⢀⠀⠀⢟⡄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣰⡧⠱⣿⣿⠆⠂⡄⢀⣤⣥⡄⠀⠠⠀⠀⡻⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⣡⢉⡀⣠⠀⢄⢄⠢⢀⠈⠋⠁⠀⠀⠀⠀⠐⢿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⢇⠠⢴⣏⣴⠶⣷⣵⣄⡤⡐⡀⢢⠐⠄⠀⠀⣾⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢼⡄⠀⠈⢈⠆⢃⠜⠛⠉⠀⠱⢈⠂⠀⣀⣴⠏⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⢲⠶⢴⠄⢨⠶⠠⠄⡀⣦⡔⣸⠶⠟⠙⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⡴⡛⠻⠁⠀⠀⠂⠀⠀⠉⡟⡶⢍⠳⡤⠬⡈⠀⠉⣈⠀⠀
+⠀⠀⢐⠶⠔⣲⠺⠓⡣⠀⠀⠀⠀⠀⠀⢠⠐⠤⠀⢹⡈⡆⠀⡖⠆⣓⣐⠛⠀⠀
+⠀⠀⠀⡤⠋⢷⣉⣦⢘⠲⣄⠀⠽⠄⠀⠀⠇⠀⠀⠈⢷⠔⠀⠹⠞⠹⢤⠀⠀⠀
+⠀⠀⠈⢧⣸⠃⠀⠘⠐⠓⡀⢳⣴⢄⠀⠬⣒⣨⡀⠔⠡⠐⡶⢗⠿⡾⠣⠃⠀⠀
+⠀⠀⠀⠀⠻⠳⠶⣷⣦⣤⡵⠿⢿⠛⡟⠯⠉⠉⠁⢀⣤⣤⡄⠤⢠⢠⠓⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⡀⣀⠈⠀⣀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠋⠂⠀⠀⠀
+
+-->
+
+
+<body>
+	<div class="glass-frame">
+		<h1>Change File Extension</h1>
+		<form>
+			<input type="file" name="fileUpload" id="fileUpload">
+
+			<label for="newExtension"><h2>New Extension:</label>
+			<select name="newExtension" id="newExtension">
+				<option value=".jpg">jpg</option>
+				<option value=".png">png</option>
+				<option value=".gif">gif</option>
+				<option value=".pdf">pdf</option>
+			</select></h2>
+			<div>
+				<button type="button" onclick="changeExtension()">Change Extension</button>
+				<button type="reset">Reset</button>
+			</div>
+		</form>
+		<p id="result"></p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
